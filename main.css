@@ -1,0 +1,778 @@
+/* Course: SENG 513 */
+/* Date: SEPT 14, 2023 */
+/* Assignment 1 */
+/* Name: Connor Swartz */
+/* UCID: 30055899 */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Titillium_Web_ExtraLight;
+    src: url('./Fonts/Titillium_Web/TitilliumWeb-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Titillium_Web_Light;
+    src: url('./Fonts/Titillium_Web/TitilliumWeb-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Titillium_Web_ExtraLightItalic;
+    src: url('./Fonts/Titillium_Web/TitilliumWeb-ExtraLightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Titillium_Web_SemiBold;
+    src: url('./Fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Titillium_Web_Regular;
+    src: url('./Fonts/Titillium_Web/TitilliumWeb-Regular.ttf') format('truetype');
+}
+
+.blue-strip-top {
+    background-color: #25274D;
+    color: white;
+    text-align: left;
+    position: relative;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.blue-strip-top h1 {
+    font-family: Titillium_Web_ExtraLight, sans-serif;
+    margin-right: 35px;
+    margin-left: 80px;
+}
+
+.blue-strip-top p {
+    font-family: Titillium_Web_ExtraLightItalic, sans-serif;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+h1 + p {
+    margin-top: 10px;
+    color: white;
+}
+
+.shop-box {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    background-color: #2E9CCA;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Titillium_Web_SemiBold, sans-serif;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.top-image-container {
+    position: relative;
+}
+
+.top-image-text {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    padding: 20px;
+    color: white;
+    font-family: Titillium_Web_Regular, sans-serif;
+    max-width: 275px;
+}
+
+.top-image-text h2 {
+    margin: 0;
+    font-size: 38px;
+}
+
+.top-image-text p {
+    margin: 0;
+    margin-top: 10px;
+}
+
+.who-we-are-container {
+    background-color: white;
+    padding: 20px;
+    margin-left: 110px;
+    margin-right: 90px;
+    height: 300px;
+}
+
+.who-we-are-container h3 {
+    font-size: 24px;
+    color: #25274D;
+    font-family: Titillium_Web_Regular, sans-serif;
+}
+
+.who-we-are-container h4 {
+    font-size: 20px;
+    color: #25274D;
+    font-family: Titillium_Web_Regular, sans-serif;
+}
+
+.who-we-are-container p {
+    font-size: 18px;
+    color: #25274D;
+    font-family: Titillium_Web_Light, sans-serif;
+}
+
+.video-placeholder-container {
+    background-color: #25274D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 700px;
+}
+
+.video-placeholder-container img {
+    width: 1050px;
+    height: 600px;
+    margin-top: 20px;
+}
+
+.tech-image-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    height: 625px;
+    font-family: Titillium_Web_Regular, sans-serif;
+}
+
+.tech-picture-text {
+    color: #25274D;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.tech-images {
+    display: flex;
+    gap: 70px;
+    margin: 0 80px;
+}
+
+.tech-images picture {
+    max-width: 100%;
+    height: auto;
+}
+
+.tech-images > .picture1 #title, 
+.tech-images > .picture2 #title, 
+.tech-images > .picture3 #title {
+    font-size: 18px;
+    color: #25274D;
+}
+
+.tech-images > .picture1 #description, 
+.tech-images > .picture2 #description, 
+.tech-images > .picture3 #description {
+    color: #25274D;
+}
+
+.droids-box, .vr-box, .laptops-box {
+    background-color: #2E9CCA;
+    height: 50px;
+    width: 130px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Titillium_Web_SemiBold, sans-serif;
+    color: white;
+}
+
+.reasons-to-shop {
+    background-color: #29648A;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    height: 650px;
+    background-image: url('./Assets/flourish.png');
+    background-size: 90%;
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center;
+    background-position: 80px 5px;
+    column-count: 2; /* Create multiple columns */
+    column-gap: 20px;
+}
+
+.logo-container {
+    color: white;
+    text-align: center;
+    font-family: Titillium_Web_SemiBold, sans-serif;
+    font-size: 24px;
+}
+
+.logo-container img {
+    display: block;
+    margin: 0 auto;
+}
+
+.numbered-list {
+    list-style-type: decimal;
+    padding-left: 0;
+    color: white;
+    font-family: Titillium_Web_Regular, sans-serif;
+    columns: 2;
+    break-inside: avoid;
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 125px;
+    column-gap: 200px;
+}
+
+.numbered-list li {
+    margin-bottom: 30px;
+    break-inside: avoid-column;
+    max-width: 95%;
+    text-align: left;
+}
+
+.numbered-list li #title {
+    font-size: 18px;
+    color: white;
+}
+
+.numbered-list li #description {
+    font-size: 16px;
+    color: white;
+}
+
+.info-page {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 700px;
+    font-family: Titillium_Web_Regular, sans-serif;
+}
+
+.column1, .column2 {
+    margin-top: 75px;
+    max-width: 36%;
+}
+
+.column1 {
+    margin-right: 150px;
+}
+
+.info-page #title {
+    color: #25274D;
+    margin-left: 20px;
+    font-size: 24px;
+    font-family: Titillium_Web_SemiBold, sans-serif;
+}
+
+.info-page #extra {
+    color: #7E8082;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.info-page ul {
+    color: #7E8082;
+    font-size: 16px;
+    font-family: Titillium_Web_Light, sans-serif;
+}
+
+.info-page ul li {
+    margin-bottom: 10px;
+}
+
+.shipping-container {
+    background-color: #FEF9F7;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shipping-container picture {
+    position: absolute;
+    left: -10px;
+    top: 0;
+}
+
+.shipping-container #vehicle {
+    width: 200px;
+    margin-top: 125px;
+    margin-left: -30px;
+}
+
+.shipping-container #arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+}
+
+.column3, .column4 {
+    list-style-type: none;
+    margin-left: 50px;
+    max-width: 30%;
+}
+
+.column3 {
+    margin-left: 200px;
+}
+
+.column4 {
+    margin-top: 70px;
+}
+
+.shipping-container #extra {
+    color: #25274D;
+    font-size: 24px;
+    font-family: Titillium_Web_SemiBold, sans-serif;
+    margin-bottom: 30px;
+}
+
+.shipping-container #title {
+    margin-bottom: 20px;
+    font-family: Titillium_Web_Regular, sans-serif;
+    color: #7E8082;
+}
+
+.shipping-container #description {
+    margin-bottom: 20px;
+    font-family: Titillium_Web_Light, sans-serif;
+    color: #7E8082;
+}
+
+.contact-container {
+    background-color: #29648A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 400px;
+    color: white;
+    text-align: center;
+}
+
+.contact-box {
+    background-color: #2E9CCA;
+    height: 50px;
+    width: 130px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Titillium_Web_SemiBold, sans-serif;
+}
+
+.contact-container #title {
+    color: white;
+    font-size: 24px;
+    font-family: Titillium_Web_SemiBold, sans-serif;
+    max-width: 35%;
+    margin-bottom: 0px;
+}
+
+.contact-container #description {
+    color: white;
+    font-size: 18px;
+    max-width: 35%;
+    font-family: Titillium_Web_Regular, sans-serif;
+}
+
+.blue-strip-bottom {
+    background-color: #25274D;
+    color: white;
+    text-align: center;
+    position: relative;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+    font-family: Titillium_Web_Regular, sans-serif;
+}
+
+
+
+
+
+@media (max-width: 640px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    @font-face {
+        font-family: Titillium_Web_ExtraLight;
+        src: url('./Fonts/Titillium_Web/TitilliumWeb-ExtraLight.ttf') format('truetype');
+    }
+    
+    @font-face {
+        font-family: Titillium_Web_Light;
+        src: url('./Fonts/Titillium_Web/TitilliumWeb-Light.ttf') format('truetype');
+    }
+    
+    @font-face {
+        font-family: Titillium_Web_ExtraLightItalic;
+        src: url('./Fonts/Titillium_Web/TitilliumWeb-ExtraLightItalic.ttf') format('truetype');
+    }
+    
+    @font-face {
+        font-family: Titillium_Web_SemiBold;
+        src: url('./Fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf') format('truetype');
+    }
+    
+    @font-face {
+        font-family: Titillium_Web_Regular;
+        src: url('./Fonts/Titillium_Web/TitilliumWeb-Regular.ttf') format('truetype');
+    }
+
+    .blue-strip-top {
+        background-color: #25274D;
+        color: white;
+        text-align: left;
+        position: relative;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .blue-strip-top h1 {
+        font-family: Titillium_Web_ExtraLight, sans-serif;
+        margin-right: 35px;
+        margin-left: 0px;
+        margin-top: -10px;
+    }
+
+    .blue-strip-top p {
+        font-family: Titillium_Web_ExtraLightItalic, sans-serif;
+        margin-top: -5px;
+    }
+
+    h1 + p {
+        margin-top: 10px;
+        color: white;
+    }
+
+    .blue-strip-top .shop-box {
+        display: none;
+    }
+    
+    img {
+        max-width: 100%; 
+        height: auto;
+    }
+    
+    .top-image-container {
+        position: relative;
+    }
+    
+    .top-image-text {
+        position: absolute;
+        top: 30px;
+        left: 60px;
+        padding: 20px;
+        color: white;
+        font-family: Titillium_Web_Regular, sans-serif;
+        max-width: 275px;
+    }
+    
+    .top-image-text h2 {
+        display: none;
+    }
+    
+    .top-image-text p {
+        display: none;
+    }
+    
+    .who-we-are-container {
+        position: relative;
+        background-color: white;
+        padding: 20px;
+        margin-left: 110px;
+        margin-right: 90px;
+        height: auto;
+    }
+    
+    .who-we-are-container h3 {
+        font-size: 24px;
+        color: #25274D;
+        font-family: Titillium_Web_Regular, sans-serif;
+    }
+    
+    .who-we-are-container h4 {
+        font-size: 20px;
+        color: #25274D;
+        font-family: Titillium_Web_Regular, sans-serif;
+    }
+    
+    .who-we-are-container p {
+        font-size: 18px;
+        color: #25274D;
+        font-family: Titillium_Web_Light, sans-serif;
+    }
+    
+    .video-placeholder-container {
+        background-color: #25274D;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        height: auto;
+    }
+    
+    .video-placeholder-container img {
+        width: 600px;
+        height: 300px;
+        margin-top: 80px;
+    }
+
+    .tech-image-container {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+        height: auto;
+        font-family: Titillium_Web_Regular, sans-serif;
+    }
+    
+    .picture1, .picture2, .picture3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .tech-images {
+        display: block;
+    }
+    
+    .tech-images picture {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .reasons-to-shop {
+        background-color: #29648A;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+        height: 650px;
+        background-image: none;
+    }
+    
+    .logo-container {
+        color: white;
+        text-align: center;
+        font-family: Titillium_Web_SemiBold, sans-serif;
+        font-size: 24px;
+    }
+    
+    .logo-container img {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .numbered-list {
+        list-style-type: decimal;
+        padding-left: 0;
+        color: white;
+        font-family: Titillium_Web_Regular, sans-serif;
+        text-align: left;
+        margin: 0 auto;
+        margin-left: 125px;
+    }
+    
+    .numbered-list li {
+        margin-bottom: 30px;
+        max-width: 95%;
+        text-align: left;
+    }
+    
+    .numbered-list li #title {
+        font-size: 18px;
+        color: white;
+    }
+    
+    .numbered-list li #description {
+        font-size: 16px;
+        color: white;
+    }
+    
+    .info-page {
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: auto;
+        font-family: Titillium_Web_Regular, sans-serif;
+    }
+    
+    .column1, .column2 {
+        margin-top: 75px;
+        max-width: 36%;
+    }
+    
+    .column1 {
+        margin-right: 150px;
+    }
+    
+    .info-page #title {
+        color: #25274D;
+        margin-left: 20px;
+        font-size: 24px;
+        font-family: Titillium_Web_SemiBold, sans-serif;
+    }
+    
+    .info-page #extra {
+        color: #7E8082;
+        margin-left: 20px;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .info-page ul {
+        color: #7E8082;
+        font-size: 16px;
+        font-family: Titillium_Web_Light, sans-serif;
+    }
+    
+    .info-page ul li {
+        margin-bottom: 10px;
+    }
+    
+    .shipping-container {
+        background-color: #FEF9F7;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .shipping-container picture {
+        position: absolute;
+        left: -10px;
+        top: 0;
+    }
+    
+    .shipping-container #vehicle {
+        width: 75px;
+        margin-top: 20px;
+        margin-left: 510px;
+    }
+    
+    .shipping-container #arrow {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50px;
+        opacity: 0.8;
+    }
+    
+    .column3, .column4 {
+        list-style-type: none;
+        margin-left: 0px;
+        max-width: 100%;
+    }
+    
+    .column4 {
+        margin-top: 70px;
+    }
+    
+    .shipping-container #extra {
+        color: #25274D;
+        font-size: 24px;
+        font-family: Titillium_Web_SemiBold, sans-serif;
+        margin-bottom: 30px;
+    }
+    
+    .shipping-container #title {
+        margin-bottom: 20px;
+        font-family: Titillium_Web_Regular, sans-serif;
+        color: #7E8082;
+    }
+    
+    .shipping-container #description {
+        margin-bottom: 20px;
+        font-family: Titillium_Web_Light, sans-serif;
+        color: #7E8082;
+    }
+    
+    .contact-container {
+        background-color: #29648A;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 20px;
+        height: auto;
+        color: white;
+        width: 100%;
+    }
+    
+    .contact-container #title {
+        color: white;
+        font-size: 24px;
+        font-family: Titillium_Web_SemiBold, sans-serif;
+        margin-bottom: 0px;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .contact-container #description {
+        color: white;
+        font-size: 18px;
+        font-family: Titillium_Web_Regular, sans-serif;
+        text-align: left;
+        width: 100%;
+    }
+
+    .blue-strip-bottom {
+        background-color: #25274D;
+        color: white;
+        text-align: center;
+        position: relative;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1px;
+        font-family: Titillium_Web_Regular, sans-serif;
+    }
+
+    .blue-strip-bottom p {
+        max-width: 60%;
+    }
+  }
